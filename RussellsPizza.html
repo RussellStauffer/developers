@@ -1,0 +1,131 @@
+<!ENCODE html>
+<html>
+
+<head>
+<title>Russell's Pizza</title>
+<meta content="width=device-width, initial-scale=1.0" name = "viewport">
+<link rel="stylesheet" type="text/css" href="css/RussellsPizza.css">
+</head>
+
+<body>
+<form id = "frmMenu">
+<h1>Russell's Pizza</h1>
+
+<div class="menu">
+<!-- Pizza Size -->
+<h3> Pizza Size: </h3>
+<input class= "pSize" type = "radio" name="pizzaSize" value="Small"> Small</br>
+<input class= "pSize" type = "radio" name="pizzaSize" value="Medium" checked> Medium</br>
+<input class= "pSize" type = "radio" name="pizzaSize" value="Large"> Large </br>
+<input class= "pSize" type = "radio" name="pizzaSize" value="X-Large"> Extra Large</br>
+</div> <!-- close menu -->
+<!-- Meats -->
+<div class="menu">
+<h3> Meats </h3>
+<input class = "pMeats" type="checkbox" name= "meat" value="Pepperoni">Pepperoni</br>
+<input class = "pMeats" type="checkbox" name= "meat" value="Can Bac">Canadian Bacon</br>
+<input class = "pMeats" type="checkbox" name= "meat" value="Sausage">Sausage</br>
+<input class = "pMeats" type="checkbox" name= "meat" value="Gr Beef">Ground Beef</br>
+<input class = "pMeats" type="checkbox" name= "meat" value="Anchovy">Anchovy</br>
+<input class = "pMeats" type="checkbox" name= "meat" value="Chicken">Chicken</br>
+</div> <!-- close menu -->
+<!-- Cheeses -->
+<div class="menu">
+<h3>Cheese</h3>
+<input class = "pCheese" type = "radio" name="cheese" value="No Cheese">No Cheese</br>
+<input class = "pCheese" type = "radio" name="cheese" value="Cheese" checked >Cheese</br>
+<input class = "pCheese" type = "radio" name="cheese" value="X-Cheese">Extra Cheese</br>
+</div> <!-- close menu -->
+
+<!-- Crusts -->
+<div class="menu">
+<h3>Crust</h3>
+<input class = "pCrust" type = "radio" name="crust" value="Plain" checked >Plain Crust</br>
+<input class = "pCrust" type = "radio" name="crust" value="Butter">Butter Crust</br>
+<input class = "pCrust" type = "radio" name="crust" value="Cheese">Cheese Stuffed Crust</br>
+<input class = "pCrust" type = "radio" name="crust" value="Spicy">Spicy Crust</br>
+<input class = "pCrust" type = "radio" name="crust" value="House">House Special Crust</br>
+</div> <!-- close menu -->
+
+<!-- Sauces -->
+<div class = "menu">
+<h3>Sauces</h3>
+<input class = "pSauce" type = "radio" name="sauce" value="Marinara" checked >Marinara</br>
+<input class = "pSauce" type = "radio" name="sauce" value="White Sauce">White Sauce</br>
+<input class = "pSauce" type = "radio" name="sauce" value="BarBQ">Barbeque</br>
+<input class = "pSauce" type = "radio" name="sauce" value="No Sauce">No Sauce</br>
+</div> <!-- close menu -->
+
+<!-- Vegetables -->
+<div class = "menu">
+<h3>Veggies</h3>
+<input class = "pVeggie" type="checkbox" name= "veggie1" value="Tomato">Tomatoes</br>
+<input class = "pVeggie" type="checkbox" name= "veggie2" value="Olives">Olives</br>
+<input class = "pVeggie" type="checkbox" name= "veggie3" value="Mushrooms">Mushroom</br>
+<input class = "pVeggie" type="checkbox" name= "veggie4" value="Spinach">Spinach</br>
+<input class = "pVeggie" type="checkbox" name= "veggie5" value="Onion">Onion</br>
+<input class = "pVeggie" type="checkbox" name= "veggie6" value="Green Pepper">Green Pepper</br>
+<input class = "pVeggie" type="checkbox" name= "veggie7" value="Pineapple">Pineapple</br>
+<input class = "pVeggie" type="checkbox" name= "veggie8" value="Jalapeno">Jalapeno</br>
+</div> <!-- end menu -->
+</form> <!-- end of form menuForm -->
+<!-- Submit Button -->
+<br>
+<input type = "button" onclick="makeReceipt()" value="Buy Pizza">
+<!-- <input type = "reset" name="resetForm" value="Cancel"> -->
+
+<!-- Create A receipt class here -->
+	
+<div id="receipt">
+	<table>
+		<tr>
+			<th class = "left">You Ordered</th>
+			<th></th>
+			<th>Subtotal</th>
+		</tr>
+		<tr>  <!-- Size -->
+			<td class = "left">Size:</td>
+			<td id= "outSize"></td>
+			<td id="outSizePrice"></td>
+		</tr>
+		<tr>  <!-- Crust -->
+			<td class="left">Crust:</td>
+			<td id= "outCrust" ></td>
+			<td id= "outCrustPrice"></td>
+		</tr>
+		<tr>  <!-- Sauce -->
+			<td class="left">Sauce:</td>
+			<td id = "outSauce"></td>
+			<td id = "outSaucePrice"></td> 
+		</tr>
+		<tr>  <!-- Cheese -->
+			<td class="left">Cheese:</td>
+			<td id= "outCheese"</td>
+			<td id ="outCheesePrice"></td>
+		</tr>
+			<tr>  <!-- Meats -->
+			<td class="left">Meats:</td>
+			<td id="outMeats"></td>
+			<td id="outMeatsPrice"></td>
+		</tr>
+		<tr> <!-- Veggies -->
+			<td class="left">Veggies:</td>
+			<td id= "outVeggies"></td>
+			<td id= "outVeggiesPrice"></td>
+		</tr>
+		<tfoot>
+			<td class="left">Total Price:</td>
+			<td></td>
+			<td id="pizzaTotal2">
+		</tfoot>
+	</table>
+
+
+</div> <!-- End of receipt -->
+
+</body>
+
+<script type="text/javascript" src="RussellsPizza.js"></script>
+<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+
+</html>
